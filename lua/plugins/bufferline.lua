@@ -8,7 +8,7 @@ return {
 		bufferline.setup({
 			options = {
 				mode = "none", -- set to "tabs" to only show tabpages instead
-				numbers = "buffer_id",
+				numbers = "none",
 				close_command = "bdelete! %d", -- can be a string | function, | false see "Mouse actions"
 				right_mouse_command = "bdelete! %d", -- can be a string | function | false, see "Mouse actions"
 				left_mouse_command = "buffer %d", -- can be a string | function, | false see "Mouse actions"
