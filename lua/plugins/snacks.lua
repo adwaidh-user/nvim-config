@@ -13,14 +13,6 @@ return {
 			sections = {
 				{ section = "header" },
 				{ section = "keys", gap = 1, padding = 1 },
-				{
-					section = "terminal",
-					cmd = "pokemon-colorscripts -n charizard -s --no-title; sleep .1",
-					random = 10,
-					pane = 2,
-					indent = 4,
-					height = 25,
-				},
 				{ section = "startup" },
 			},
 		},
