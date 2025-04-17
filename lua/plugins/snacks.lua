@@ -137,5 +137,22 @@ return{
         Snacks.toggle.dim():map("<leader>uD")
       end,
     })
+
+    vim.api.nvim_create_autocmd("RecordingEnter", {
+      callback = function()
+        vim.defer_fn(function()
+          local reg = vim.fn.reg_recording()
+          if reg and reg ~= "" then
+            Snacks.notify.info("Recording @" .. reg, { title = "Macro" })
+          end
+        end, 20) -- 20ms delay so reg_recording() returns the correct value
+      end,
+    })
+
+    vim.api.nvim_create_autocmd("RecordingLeave", {
+      callback = function()
+        Snacks.notify.info("Stopped recording", { title = "Macro" })
+      end,
+    })
   end,
 }
