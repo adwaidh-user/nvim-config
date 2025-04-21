@@ -14,8 +14,8 @@ return {
 				left_mouse_command = "buffer %d", -- can be a string | function, | false see "Mouse actions"
 				middle_mouse_command = nil, -- can be a string | function, | false see "Mouse actions"
 				indicator = {
-					-- icon = "▎", -- this should be omitted if indicator style is not 'icon'
-					style = "underline", -- 'icon' | 'underline' | 'none',
+					icon = "▎", -- this should be omitted if indicator style is not 'icon'
+					style = "icon", -- 'icon' | 'underline' | 'none',
 				},
 				buffer_close_icon = "󰅖",
 				modified_icon = "● ",
@@ -51,7 +51,7 @@ return {
 				move_wraps_at_ends = false,  -- whether or not the move command "wraps" at the first or last position
 				-- can also be a table containing 2 custom separators
 				-- [focused and unfocused]. eg: { '|', '|' }
-				separator_style = "slant", -- slant" | "slope" | "thick" | "thin" | { "any", "any" }
+				separator_style = "thick", -- slant" | "slope" | "thick" | "thin" | { "any", "any" }
 				enforce_regular_tabs = false,
 				always_show_bufferline = true,
 				auto_toggle_bufferline = true,
