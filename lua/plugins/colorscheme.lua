@@ -77,4 +77,4 @@ local eldritch = {
   end
 }
 
-return eldritch
+return catppuccin

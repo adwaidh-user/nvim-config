@@ -1,4 +1,3 @@
-local g = vim.g
 local o = vim.opt
 
 --Editor options
