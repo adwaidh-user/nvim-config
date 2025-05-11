@@ -16,16 +16,6 @@ return {
                 -- linting
                 null_ls.builtins.diagnostics.pylint,
             },
-
-            on_attach = function(client, bufnr)
-                -- Check if clangd is attached to this buffer
-                for _, active_client in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
-                    if active_client.name == "clangd" then
-                        client.offset_encoding = "utf-8"
-                        break
-                    end
-                end
-            end,
         })
     end,
 }
