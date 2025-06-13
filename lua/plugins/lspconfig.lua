@@ -17,7 +17,7 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
-            capabilities.offfsetEncoding = { "utf-16" }
+            capabilities.offsetEncoding = { "utf-16" }
 
             require("mason-lspconfig").setup({
                 automatic_installation = true,
@@ -82,6 +82,8 @@ return {
                     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, opts)
                 end,
             })
+
+            vim.diagnostic.config({ virtual_text = true })
         end,
     },
 }
